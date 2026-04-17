@@ -376,22 +376,22 @@
         </a>
     </nav>
 
-    <!-- HERO SECTION (Design recriado com base no image_ce7003.jpg) -->
+    <!-- HERO SECTION -->
     <section id="hero" class="relative min-h-[90vh] lg:min-h-screen flex items-center justify-center text-center z-10 pt-[100px] pb-[60px]">
-        <!-- Background Wrapper Seguro (Sem máscara CSS) -->
+        <!-- Background Wrapper Seguro -->
         <div class="absolute inset-0 z-0 overflow-hidden bg-[#020302]">
             <!-- Imagem PB Centralizada -->
             <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1920&q=80" alt="Investidor" class="w-full h-full object-cover object-center grayscale opacity-50">
             
-            <!-- Efeito Radial Verde Intenso (Emanando da Esquerda) -->
+            <!-- Efeito Radial Verde Intenso -->
             <div class="absolute top-0 left-0 w-full md:w-[70%] h-full bg-[radial-gradient(ellipse_at_left_center,rgba(0,229,106,0.25)_0%,transparent_70%)] pointer-events-none"></div>
             
-            <!-- Sombreamento Direita e Base (Vinheta Escura) -->
+            <!-- Sombreamento Direita e Base -->
             <div class="absolute inset-0 bg-gradient-to-t from-[#020302] via-[#020302]/20 to-[#020302]/40 pointer-events-none"></div>
             <div class="absolute inset-0 bg-gradient-to-l from-[#020302] via-transparent to-transparent pointer-events-none"></div>
         </div>
 
-        <!-- Conteúdo do Hero Centralizado -->
+        <!-- Conteúdo do Hero -->
         <div class="container mx-auto px-6 relative z-10">
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 max-w-4xl mx-auto reveal-up" style="transition-delay: 0.1s;">
                 Inteligência para cada etapa da sua <span class="text-avel-green">vida financeira.</span>
@@ -407,14 +407,12 @@
         </div>
     </section>
 
-    <!-- O WORKSHOP (Thumb do Palestrante + Descrição) -->
+    <!-- O WORKSHOP -->
     <section id="workshop" class="py-24 relative z-10 px-6 bg-[#020302] overflow-hidden border-t border-white/5">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
-            <!-- Thumbnail do Palestrante (Esquerda) -->
             <div class="md:w-5/12 w-full reveal-left">
                 <div class="relative rounded-3xl overflow-hidden aspect-[4/5] md:aspect-square shadow-[0_0_40px_rgba(0,229,106,0.15)] border border-white/10 group">
                     <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80" alt="Palestrante" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500">
-                    <!-- Gradiente escuro na base da imagem para ler o texto -->
                     <div class="absolute inset-0 bg-gradient-to-t from-[#020302] via-[#020302]/50 to-transparent opacity-90"></div>
                     
                     <div class="absolute bottom-0 left-0 w-full p-8 text-center">
@@ -425,7 +423,6 @@
                 </div>
             </div>
             
-            <!-- Descrição (Direita) -->
             <div class="md:w-7/12 w-full reveal-right" style="transition-delay: 0.2s;">
                 <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
                     A sua carreira de assessor <br><span class="text-avel-green">em outro patamar</span>
@@ -441,11 +438,10 @@
         </div>
     </section>
 
-    <!-- FORMULÁRIO DE INSCRIÇÃO (Cadência: Degradê Central) -->
+    <!-- FORMULÁRIO DE INSCRIÇÃO -->
     <section id="inscricao" class="py-24 relative z-10 px-6 bg-gradient-to-b from-[#020302] via-[#061109] to-[#020302] border-y border-white/5 overflow-hidden">
         <div class="max-w-4xl mx-auto">
             <div class="card-avel p-8 md:p-14 relative overflow-hidden shadow-2xl reveal-scale">
-                <!-- Luz interna do card -->
                 <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-1/2 bg-avel-green/10 blur-[80px] rounded-full pointer-events-none"></div>
                 
                 <div class="text-center relative z-10 mb-10 reveal-up" style="transition-delay: 0.2s;">
@@ -456,12 +452,10 @@
 
                 <form id="form-inscricao" class="relative z-10 space-y-6 reveal-up" style="transition-delay: 0.4s;">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Campo Nome -->
                         <div>
                             <label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">Nome Completo</label>
                             <input type="text" required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all" placeholder="O seu nome e sobrenome">
                         </div>
-                        <!-- Campo Email -->
                         <div>
                             <label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">E-mail Corporativo/Pessoal</label>
                             <input type="email" required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all" placeholder="seu@email.com">
@@ -469,12 +463,10 @@
                     </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Campo Celular -->
                         <div>
                             <label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">Celular com DDD</label>
                             <input type="tel" required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all" placeholder="(00) 00000-0000">
                         </div>
-                        <!-- Campo ANCORD -->
                         <div>
                             <label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">Possui certificação ANCORD?</label>
                             <select required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all appearance-none">
@@ -497,10 +489,9 @@
         </div>
     </section>
 
-    <!-- TEXTO DE DESTAQUE AVEL & QUEM SOMOS (Fundo Preto) -->
+    <!-- TEXTO DE DESTAQUE AVEL & QUEM SOMOS -->
     <section class="py-24 relative z-10 px-6 bg-[#020302] overflow-hidden">
         <div class="max-w-5xl mx-auto">
-            <!-- Texto Centralizado -->
             <div class="text-center mb-16 reveal-up">
                 <p class="text-avel-green font-semibold tracking-widest uppercase text-sm mb-4">A Filosofia da Carreira em Escala</p>
                 <h2 class="text-3xl md:text-4xl font-bold leading-snug text-white">
@@ -509,7 +500,6 @@
                 </h2>
             </div>
 
-            <!-- Bloco Quem Somos -->
             <div class="flex flex-col md:flex-row items-center gap-12 mt-16">
                 <div class="md:w-1/2 reveal-left" style="transition-delay: 0.2s;">
                     <h3 class="text-2xl font-bold mb-4">Quem Somos</h3>
@@ -521,7 +511,6 @@
                     </p>
                 </div>
                 <div class="md:w-1/2 w-full reveal-right" style="transition-delay: 0.4s;">
-                    <!-- Imagem/Thumbnail de Vídeo -->
                     <div class="relative rounded-2xl overflow-hidden aspect-video border border-white/10 card-avel group cursor-pointer shadow-2xl">
                         <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Apresentação Institucional" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0">
                         <div class="absolute inset-0 flex items-center justify-center">
@@ -535,14 +524,12 @@
         </div>
     </section>
 
-    <!-- BIG NUMBERS (Com Degradê) -->
+    <!-- BIG NUMBERS -->
     <section id="numeros" class="social-info relative overflow-hidden border-y border-white/5">
-        <!-- Fundo Degradê Verde Suave (Centro) -->
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,106,0.12)_0%,transparent_60%)] z-0 pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <!-- Número 1 -->
                 <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.1s;">
                     <div class="orbit-circle">
                         <svg viewBox="0 0 100 100" class="orbit-svg">
@@ -562,7 +549,6 @@
                     <p class="uppercase tracking-widest text-xs font-bold text-gray-500">Sob Custódia (AUM)</p>
                 </div>
                 
-                <!-- Número 2 -->
                 <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.3s;">
                     <div class="orbit-circle">
                         <svg viewBox="0 0 100 100" class="orbit-svg">
@@ -575,7 +561,6 @@
                     <p class="uppercase tracking-widest text-xs font-bold text-gray-500">Clientes Ativos</p>
                 </div>
                 
-                <!-- Número 3 -->
                 <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.5s;">
                     <div class="orbit-circle">
                         <svg viewBox="0 0 100 100" class="orbit-svg">
@@ -592,15 +577,11 @@
     </section>
 
     <!-- ÁREA DE SOLUÇÕES INTERCALADAS -->
-    
-    <!-- Solução 1 (Captação) - Degradê à Direita -->
     <section id="solucoes" class="py-24 relative z-10 px-6 overflow-hidden bg-[#020302]">
-        <!-- Fundo Degradê Verde Suave (Direita) -->
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_100%_50%,rgba(0,229,106,0.15)_0%,transparent_50%)] z-0 pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
             <div class="md:w-1/2 md:pr-10 reveal-left">
-                <!-- Título Estilo Avel (Texto Verde + Cinza Claro) -->
                 <h3 class="text-3xl font-bold mb-6 flex flex-wrap items-center gap-2">
                     <span class="text-avel-green tracking-tight">Carreira em Escala.</span> 
                     <span class="text-gray-400 font-light text-2xl">| Captação</span>
@@ -614,7 +595,6 @@
                 <a href="#inscricao" class="btn-avel text-xs px-8 py-3">Ver Mais</a>
             </div>
             <div class="md:w-1/2 w-full reveal-right">
-                <!-- Imagem Direta sem o Card de Fundo -->
                 <div class="rounded-2xl overflow-hidden h-[380px] shadow-2xl border border-white/5">
                     <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80" alt="Captação" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
@@ -622,9 +602,7 @@
         </div>
     </section>
 
-    <!-- Solução 2 (Gestão) - Degradê à Esquerda -->
     <section class="py-24 relative z-10 px-6 overflow-hidden bg-[#020302]">
-        <!-- Fundo Degradê Verde Suave (Esquerda) -->
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_0%_50%,rgba(0,229,106,0.15)_0%,transparent_50%)] z-0 pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16 relative z-10">
@@ -649,9 +627,7 @@
         </div>
     </section>
 
-    <!-- Solução 3 (Ecossistema) - Degradê à Direita -->
     <section class="py-24 relative z-10 px-6 overflow-hidden bg-[#020302]">
-        <!-- Fundo Degradê Verde Suave (Direita) -->
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_100%_50%,rgba(0,229,106,0.15)_0%,transparent_50%)] z-0 pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
@@ -676,11 +652,9 @@
         </div>
     </section>
 
-    <!-- RUMO AO TOPO (Cadência: Fundo com Imagem Escura) -->
+    <!-- RUMO AO TOPO -->
     <section id="rumo-bilhao" class="py-32 relative z-10 px-6 overflow-hidden border-y border-white/5">
-        <!-- Imagem de Fundo (Plateia/Evento) -->
         <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=1920&q=80" alt="Plateia Evento" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity z-0">
-        <!-- Overlay Gradiente -->
         <div class="absolute inset-0 bg-gradient-to-r from-[#020302] via-[#020302]/80 to-[#020302] z-0"></div>
         
         <div class="max-w-3xl mx-auto text-center card-avel p-12 relative z-10 shadow-2xl reveal-scale">
@@ -697,7 +671,6 @@
 
     <!-- EPISÓDIOS E CATÁLOGO -->
     <section id="catalogo" class="relative pt-32 pb-24 overflow-hidden">
-        <!-- Efeito Aurora/Onda Verde de Fundo -->
         <div class="aurora-wave"></div>
         
         <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -781,6 +754,20 @@
         </div>
     </footer>
 
+    <!-- NOTIFICAÇÃO DE PROVA SOCIAL (TOAST) -->
+    <div id="social-proof-toast" class="fixed bottom-[90px] md:bottom-10 left-6 md:left-10 z-50 transform translate-y-[150%] opacity-0 transition-all duration-500 ease-out pointer-events-none">
+        <div class="card-avel px-4 py-3 flex items-center gap-3 border border-avel-green/30 bg-[#0a0f0c]/90 backdrop-blur-xl shadow-[0_5px_20px_rgba(0,229,106,0.15)] min-w-[260px]">
+            <div id="toast-avatar" class="w-10 h-10 rounded-full bg-gradient-to-br from-avel-green to-[#008f42] flex items-center justify-center text-black font-extrabold text-sm shadow-inner">
+                RS
+            </div>
+            <div>
+                <p class="text-white text-[13px] font-bold leading-tight" id="toast-name">Ricardo S.</p>
+                <p class="text-gray-400 text-[11px] leading-tight mt-0.5">De <span id="toast-city" class="text-avel-green font-semibold">São Paulo, SP</span></p>
+                <p class="text-gray-500 text-[10px] mt-1 flex items-center gap-1"><i class="fa fa-check-circle text-avel-green"></i> <span id="toast-time">acabou de se inscrever</span></p>
+            </div>
+        </div>
+    </div>
+
     <!-- SCRIPTS -->
     <script>
     // Menu Dinâmico no Scroll
@@ -819,9 +806,55 @@
         }, 1500);
     });
 
+    // Lógica para Notificações de Prova Social (Toast)
+    const toastData = {
+        names: ["Ricardo S.", "Fernanda M.", "João P.", "Camila T.", "Marcelo F.", "Ana L.", "Lucas B.", "Mariana C.", "Thiago A.", "Beatriz R.", "Eduardo V.", "Letícia G."],
+        cities: ["São Paulo, SP", "Rio de Janeiro, RJ", "Belo Horizonte, MG", "Curitiba, PR", "Porto Alegre, RS", "Brasília, DF", "Salvador, BA", "Fortaleza, CE", "Recife, PE", "Goiânia, GO", "Florianópolis, GO", "Campinas, SC"],
+        times: ["acabou de se inscrever", "inscreveu-se há 1 min", "inscreveu-se há 2 min", "garantiu a vaga agora"]
+    };
+
+    const toastEl = document.getElementById('social-proof-toast');
+    const toastNameEl = document.getElementById('toast-name');
+    const toastCityEl = document.getElementById('toast-city');
+    const toastTimeEl = document.getElementById('toast-time');
+    const toastAvatarEl = document.getElementById('toast-avatar');
+
+    function triggerSocialProof() {
+        // Seleciona dados aleatórios
+        const name = toastData.names[Math.floor(Math.random() * toastData.names.length)];
+        const city = toastData.cities[Math.floor(Math.random() * toastData.cities.length)];
+        const time = toastData.times[Math.floor(Math.random() * toastData.times.length)];
+        
+        // Gera as iniciais para o avatar (ex: "Ricardo S." -> "RS")
+        const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2);
+
+        // Preenche o HTML
+        toastNameEl.innerText = name;
+        toastCityEl.innerText = city;
+        toastTimeEl.innerText = time;
+        toastAvatarEl.innerText = initials;
+
+        // Anima a entrada
+        toastEl.classList.remove('translate-y-[150%]', 'opacity-0');
+        toastEl.classList.add('translate-y-0', 'opacity-100');
+
+        // Oculta após 5 segundos
+        setTimeout(() => {
+            toastEl.classList.remove('translate-y-0', 'opacity-100');
+            toastEl.classList.add('translate-y-[150%]', 'opacity-0');
+        }, 5000);
+    }
+
     document.addEventListener("DOMContentLoaded", function() {
         
-        // 1. Observer para os Números Animados
+        // Inicia o loop da Prova Social
+        setTimeout(() => {
+            triggerSocialProof();
+            // Dispara aleatoriamente a cada 12 a 20 segundos
+            setInterval(triggerSocialProof, Math.floor(Math.random() * 8000) + 12000);
+        }, 3000); // Primeiro disparo 3s após o carregamento
+
+        // Observer para os Números Animados
         const numberElements = document.querySelectorAll('.animate-number');
         const numberObserver = new IntersectionObserver((entries, obs) => {
             entries.forEach(entry => {
@@ -863,7 +896,7 @@
         
         numberElements.forEach(num => numberObserver.observe(num));
 
-        // 2. Observer para Animações de Scroll Reveal
+        // Observer para Animações de Scroll Reveal
         const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
