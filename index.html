@@ -39,7 +39,7 @@
         }
     </script>
 
-    <!-- ESTILOS CUSTOMIZADOS: TEMA E ANIMAÇÕES -->
+    <!-- ESTILOS CUSTOMIZADOS: TEMA AVEL E ANIMAÇÕES -->
     <style>
         body {
             background-color: #020302 !important;
@@ -119,7 +119,7 @@
             pointer-events: none;
         }
 
-        /* Menu Pílula Flutuante Topo (Glassmorphism Glossy Premium) */
+        /* Menu Pílula Flutuante Topo (Centralizado com CSS Grid) */
         .avel-header {
             position: fixed;
             top: 25px;
@@ -129,35 +129,18 @@
             width: calc(100% - 48px);
             max-width: 880px;
             height: 60px;
-            background: linear-gradient(135deg, rgba(20, 20, 20, 0.5) 0%, rgba(5, 5, 5, 0.7) 100%);
-            backdrop-filter: blur(24px) saturate(200%);
-            -webkit-backdrop-filter: blur(24px) saturate(200%);
+            background: rgba(12, 12, 12, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border-radius: 40px;
-            /* Reflexos na borda simulando luz no vidro */
             border: 1px solid rgba(255, 255, 255, 0.05);
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
+            
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
             padding: 0 32px;
             z-index: 9999;
-            /* Sombra externa e brilho interno (Glossy) */
-            box-shadow: 
-                0 10px 40px rgba(0,0,0,0.4),
-                inset 0 2px 10px rgba(255, 255, 255, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        /* ESTADO SCROLLED (Mais claro/platinado para destacar no fundo escuro) */
-        .avel-header.scrolled {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-            border-color: rgba(255, 255, 255, 0.2);
-            border-top-color: rgba(255, 255, 255, 0.4);
-            border-left-color: rgba(255, 255, 255, 0.3);
-            box-shadow: 
-                0 10px 30px rgba(0, 0, 0, 0.7), 
-                inset 0 1px 15px rgba(255, 255, 255, 0.25);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
         }
         
         .avel-logo {
@@ -166,6 +149,8 @@
             color: #fff;
             letter-spacing: -0.5px;
             white-space: nowrap;
+            grid-column: 1;
+            justify-self: start;
         }
         .avel-logo span { color: #00E56A; }
         
@@ -177,8 +162,8 @@
             .avel-nav {
                 display: flex;
                 gap: 32px;
-                justify-content: flex-end;
-                margin-left: auto;
+                grid-column: 2;
+                justify-self: center;
             }
             .avel-nav a {
                 color: #a0a0a0;
@@ -189,18 +174,19 @@
                 text-decoration: none;
                 transition: color 0.3s ease;
             }
-            /* Texto mais branco/nítido quando rola a página */
-            .avel-header.scrolled .avel-nav a {
-                color: #ffffff;
-            }
-            .avel-nav a:hover, .avel-header.scrolled .avel-nav a:hover { 
+            .avel-nav a:hover { 
                 color: #00E56A; 
             }
         }
         
         @media (max-width: 767px) {
             .avel-header {
+                display: flex;
                 justify-content: center;
+            }
+            .avel-logo {
+                grid-column: unset;
+                justify-self: center;
             }
         }
 
@@ -291,6 +277,20 @@
             transform: translateY(-5px);
         }
 
+        /* Efeito Glassmorphism Glossy para Prova Social */
+        .glass-testimonial {
+            background: linear-gradient(135deg, rgba(25, 25, 25, 0.4) 0%, rgba(10, 10, 10, 0.7) 100%);
+            backdrop-filter: blur(24px) saturate(200%);
+            -webkit-backdrop-filter: blur(24px) saturate(200%);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.6),
+                inset 0 2px 15px rgba(255, 255, 255, 0.1);
+        }
+
         /* Big Numbers (Órbita) */
         .social-info {
             padding: 120px 0;
@@ -330,9 +330,6 @@
             body {
                 padding-bottom: 65px; /* Espaço para a barra inferior */
             }
-            .avel-header {
-                justify-content: center;
-            }
         }
     </style>
 </head>
@@ -343,7 +340,7 @@
     <div class="glow-bg glow-2"></div>
     <div class="aurora-wave-mid"></div>
 
-    <!-- HEADER TOPO (Perfeitamente Centralizado e Vivo) -->
+    <!-- HEADER TOPO -->
     <header class="avel-header reveal-up">
         <div class="avel-logo">
             Carreira em Escala<span>.</span>
@@ -485,6 +482,105 @@
                     </div>
                     <p class="text-center text-xs text-gray-500 mt-4"><i class="fa fa-lock mr-1"></i> Os seus dados estão criptografados e serão usados exclusivamente para contato sobre o workshop.</p>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO: PROVA SOCIAL (SIMULADOR YOUTUBE + GLASSMORPHISM) -->
+    <section id="prova-social" class="py-24 relative z-10 px-6 bg-[#020302] overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,229,106,0.08)_0%,transparent_60%)] z-0 pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
+            <!-- Texto Esquerda -->
+            <div class="md:w-5/12 w-full reveal-left">
+                <p class="text-avel-green font-semibold tracking-widest uppercase text-sm mb-4">Resultados Reais</p>
+                <h2 class="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
+                    Aulas que transformam <br><span class="text-avel-green">trajetórias.</span>
+                </h2>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                    Não estamos a falar de teorias vazias. Este é o método passo a passo que destrava carreiras, aumenta a confiança comercial e prepara os alunos para os melhores escritórios do Brasil.
+                </p>
+                <a href="#inscricao" class="btn-avel text-xs px-8 py-3">Quero ter esses resultados</a>
+            </div>
+
+            <!-- Celular e Cards de Glassmorphism (Direita) -->
+            <div class="md:w-7/12 w-full relative min-h-[600px] flex justify-center items-center reveal-right mt-10 md:mt-0">
+                <!-- Phone Mockup -->
+                <div class="relative w-[260px] md:w-[300px] h-[550px] md:h-[600px] border-[8px] md:border-[12px] border-[#1f1f1f] rounded-[2.5rem] md:rounded-[3rem] bg-black shadow-[0_0_40px_rgba(0,229,106,0.15)] z-10 flex flex-col">
+                    <!-- Notch -->
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-[100px] md:w-[120px] h-[25px] bg-[#1f1f1f] rounded-b-2xl z-30"></div>
+                    
+                    <!-- Conteúdo do Celular (Simulando YouTube Live) -->
+                    <div class="w-full h-full relative overflow-hidden rounded-[1.5rem] md:rounded-[2rem]">
+                        <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=600&q=80" alt="Palestra YouTube" class="w-full h-full object-cover">
+                        
+                        <!-- Sombras Superiores/Inferiores -->
+                        <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black/80 to-transparent z-20"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-black via-black/80 to-transparent z-20 flex flex-col justify-end p-4">
+                            
+                            <!-- Título do Vídeo -->
+                            <h4 class="text-white font-bold text-sm leading-tight drop-shadow-md">Workshop Carreira em Escala</h4>
+                            <p class="text-gray-300 text-xs mt-1 drop-shadow-md">Samyr Castro</p>
+                            
+                            <!-- Barra de progresso -->
+                            <div class="w-full h-1 bg-white/30 rounded-full mt-3 relative">
+                                <div class="absolute top-0 left-0 w-1/3 h-full bg-red-600 rounded-full relative">
+                                    <div class="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-2.5 h-2.5 bg-red-600 rounded-full"></div>
+                                </div>
+                            </div>
+                            <!-- Tempo -->
+                            <div class="flex justify-between text-[9px] text-gray-300 mt-1.5 font-medium">
+                                <span>14:32</span>
+                                <span>Ao Vivo</span>
+                            </div>
+                            
+                            <!-- Controles -->
+                            <div class="flex justify-between items-center mt-2 text-white/90">
+                                <div class="flex gap-4 text-base">
+                                    <i class="fa fa-pause"></i>
+                                    <i class="fa fa-volume-up"></i>
+                                </div>
+                                <div class="flex gap-4 text-base">
+                                    <i class="fa fa-cog"></i>
+                                    <i class="fa fa-expand"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LIVE Badge -->
+                        <div class="absolute top-10 left-4 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1.5 z-20 shadow-lg">
+                            <div class="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></div> AO VIVO
+                        </div>
+                        <!-- Viewers Badge -->
+                        <div class="absolute top-10 left-20 bg-black/50 backdrop-blur text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1 z-20 border border-white/10">
+                            <i class="fa fa-eye"></i> 1.245
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Cards de Prova Social (Glassmorphism Glossy) -->
+                
+                <!-- Card 1 (Esquerda Topo) -->
+                <div class="glass-testimonial absolute top-[12%] -left-[5%] md:-left-[25%] w-[280px] md:w-[320px] p-4 md:p-5 rounded-2xl z-30 shadow-2xl">
+                    <p class="text-white font-bold text-sm md:text-base leading-snug mb-2">"O evento foi fundamental para o meu ingresso na carreira. Passei na ANCORD com o método!"</p>
+                    <p class="text-avel-green text-[10px] md:text-xs font-semibold tracking-wide uppercase">Iniciante • Certificação</p>
+                    
+                    <!-- Pílula com o Nome -->
+                    <div class="absolute -bottom-3 right-4 md:right-6 bg-[#0a120e] border border-avel-green/40 text-white px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold shadow-xl backdrop-blur-xl whitespace-nowrap">
+                        Lucas B. - São Paulo/SP
+                    </div>
+                </div>
+
+                <!-- Card 2 (Direita Base) -->
+                <div class="glass-testimonial absolute bottom-[20%] -right-[5%] md:-right-[20%] w-[280px] md:w-[320px] p-4 md:p-5 rounded-2xl z-30 shadow-2xl">
+                    <p class="text-white font-bold text-sm md:text-base leading-snug mb-2">"A abordagem do Samyr é cirúrgica. Já captei R$ 15 milhões no primeiro trimestre!"</p>
+                    <p class="text-avel-green text-[10px] md:text-xs font-semibold tracking-wide uppercase">Captação • Alta Renda</p>
+                    
+                    <!-- Pílula com o Nome -->
+                    <div class="absolute -bottom-3 right-4 md:right-6 bg-[#0a120e] border border-avel-green/40 text-white px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold shadow-xl backdrop-blur-xl whitespace-nowrap">
+                        Mariana C. - Curitiba/PR
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -820,25 +916,20 @@
     const toastAvatarEl = document.getElementById('toast-avatar');
 
     function triggerSocialProof() {
-        // Seleciona dados aleatórios
         const name = toastData.names[Math.floor(Math.random() * toastData.names.length)];
         const city = toastData.cities[Math.floor(Math.random() * toastData.cities.length)];
         const time = toastData.times[Math.floor(Math.random() * toastData.times.length)];
         
-        // Gera as iniciais para o avatar (ex: "Ricardo S." -> "RS")
         const initials = name.split(' ').map(n => n[0]).join('').substring(0, 2);
 
-        // Preenche o HTML
         toastNameEl.innerText = name;
         toastCityEl.innerText = city;
         toastTimeEl.innerText = time;
         toastAvatarEl.innerText = initials;
 
-        // Anima a entrada
         toastEl.classList.remove('translate-y-[150%]', 'opacity-0');
         toastEl.classList.add('translate-y-0', 'opacity-100');
 
-        // Oculta após 5 segundos
         setTimeout(() => {
             toastEl.classList.remove('translate-y-0', 'opacity-100');
             toastEl.classList.add('translate-y-[150%]', 'opacity-0');
@@ -847,12 +938,10 @@
 
     document.addEventListener("DOMContentLoaded", function() {
         
-        // Inicia o loop da Prova Social
         setTimeout(() => {
             triggerSocialProof();
-            // Dispara aleatoriamente a cada 12 a 20 segundos
             setInterval(triggerSocialProof, Math.floor(Math.random() * 8000) + 12000);
-        }, 3000); // Primeiro disparo 3s após o carregamento
+        }, 3000); 
 
         // Observer para os Números Animados
         const numberElements = document.querySelectorAll('.animate-number');
@@ -902,7 +991,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target); // Animar apenas uma vez
+                    observer.unobserve(entry.target);
                 }
             });
         }, { 
