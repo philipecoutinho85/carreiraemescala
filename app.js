@@ -110,8 +110,8 @@ const siteMarkup = String.raw`
                         <div class="absolute top-10 left-20 bg-black/50 backdrop-blur text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1 z-20 border border-white/10"><i class="fa fa-eye"></i> 1.245</div>
                     </div>
                 </div>
-                <div class="glass-testimonial absolute top-[12%] -left-[5%] md:-left-[25%] w-[280px] md:w-[320px] p-4 md:p-5 rounded-2xl z-30 shadow-2xl"><p class="text-white font-bold text-sm md:text-base leading-snug mb-2">&quot;O evento foi fundamental para o meu ingresso na carreira. Passei na ANCORD com o método!&quot;</p><p class="text-avel-green text-[10px] md:text-xs font-semibold tracking-wide uppercase">Iniciante • Certificação</p><div class="absolute -bottom-3 right-4 md:right-6 bg-[#0a120e] border border-avel-green/40 text-white px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold shadow-xl backdrop-blur-xl whitespace-nowrap">Lucas B. - São Paulo/SP</div></div>
-                <div class="glass-testimonial absolute bottom-[20%] -right-[5%] md:-right-[20%] w-[280px] md:w-[320px] p-4 md:p-5 rounded-2xl z-30 shadow-2xl"><p class="text-white font-bold text-sm md:text-base leading-snug mb-2">&quot;A abordagem do Samyr é cirúrgica. Já captei R$ 15 milhões no primeiro trimestre!&quot;</p><p class="text-avel-green text-[10px] md:text-xs font-semibold tracking-wide uppercase">Captação • Alta Renda</p><div class="absolute -bottom-3 right-4 md:right-6 bg-[#0a120e] border border-avel-green/40 text-white px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold shadow-xl backdrop-blur-xl whitespace-nowrap">Mariana C. - Curitiba/PR</div></div>
+                <div class="glass-testimonial absolute top-[12%] -left-[5%] md:-left-[25%] w-[280px] md:w-[320px] p-4 md:p-5 rounded-2xl z-30 shadow-2xl"><p class="text-white font-bold text-sm md:text-base leading-snug mb-2">&quot;O evento foi fundamental para o meu ingresso na carreira. Passei na ANCORD com o método!&quot;</p><p class="text-avel-green text-[10px] md:text-xs font-semibold tracking-wide uppercase">Iniciante • Certificação</p><div class="absolute -bottom-3 right-4 md:right-6 bg-[#0a120e] border border-avel-green/40 text-white px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold shadow-xl backdrop-blur-xl whitespace-nowrap">Aluno do Workshop</div></div>
+                <div class="glass-testimonial absolute bottom-[20%] -right-[5%] md:-right-[20%] w-[280px] md:w-[320px] p-4 md:p-5 rounded-2xl z-30 shadow-2xl"><p class="text-white font-bold text-sm md:text-base leading-snug mb-2">&quot;A abordagem do Samyr é cirúrgica. Já captei R$ 15 milhões no primeiro trimestre!&quot;</p><p class="text-avel-green text-[10px] md:text-xs font-semibold tracking-wide uppercase">Captação • Alta Renda</p><div class="absolute -bottom-3 right-4 md:right-6 bg-[#0a120e] border border-avel-green/40 text-white px-3 md:px-4 py-1.5 rounded-full text-[10px] md:text-xs font-bold shadow-xl backdrop-blur-xl whitespace-nowrap">Profissional do Mercado</div></div>
             </div>
         </div>
     </section>
@@ -210,7 +210,7 @@ const siteMarkup = String.raw`
     </footer>
 
     <div id="social-proof-toast" class="fixed bottom-[90px] md:bottom-10 left-6 md:left-10 z-50 transform translate-y-[150%] opacity-0 transition-all duration-500 ease-out pointer-events-none">
-        <div class="card-avel px-4 py-3 flex items-center gap-3 border border-avel-green/30 bg-[#0a0f0c]/90 backdrop-blur-xl shadow-[0_5px_20px_rgba(0,229,106,0.15)] min-w-[260px]"><div id="toast-avatar" class="w-10 h-10 rounded-full bg-gradient-to-br from-avel-green to-[#008f42] flex items-center justify-center text-black font-extrabold text-sm shadow-inner">RS</div><div><p class="text-white text-[13px] font-bold leading-tight" id="toast-name">Ricardo S.</p><p class="text-gray-400 text-[11px] leading-tight mt-0.5">De <span id="toast-city" class="text-avel-green font-semibold">São Paulo, SP</span></p><p class="text-gray-500 text-[10px] mt-1 flex items-center gap-1"><i class="fa fa-check-circle text-avel-green"></i> <span id="toast-time">acabou de se inscrever</span></p></div></div>
+        <div class="card-avel px-4 py-3 flex items-center gap-3 border border-avel-green/30 bg-[#0a0f0c]/90 backdrop-blur-xl shadow-[0_5px_20px_rgba(0,229,106,0.15)] min-w-[260px]"><div id="toast-avatar" class="w-10 h-10 rounded-full bg-gradient-to-br from-avel-green to-[#008f42] flex items-center justify-center text-black font-extrabold text-sm shadow-inner">CE</div><div><p class="text-white text-[13px] font-bold leading-tight" id="toast-name">Comunidade Carreira em Escala</p><p class="text-gray-400 text-[11px] leading-tight mt-0.5">Em <span id="toast-city" class="text-avel-green font-semibold">todo o Brasil</span></p><p class="text-gray-500 text-[10px] mt-1 flex items-center gap-1"><i class="fa fa-check-circle text-avel-green"></i> <span id="toast-time">novas inscrições em andamento</span></p></div></div>
     </div>
 `;
 
@@ -251,9 +251,9 @@ function App() {
     cleanups.push(() => form?.removeEventListener('submit', onSubmit));
 
     const toastData = {
-      names: ["Ricardo S.", "Fernanda M.", "João P.", "Camila T.", "Marcelo F.", "Ana L.", "Lucas B.", "Mariana C.", "Thiago A.", "Beatriz R.", "Eduardo V.", "Letícia G."],
-      cities: ["São Paulo, SP", "Rio de Janeiro, RJ", "Belo Horizonte, MG", "Curitiba, PR", "Porto Alegre, RS", "Brasília, DF", "Salvador, BA", "Fortaleza, CE", "Recife, PE", "Goiânia, GO", "Florianópolis, GO", "Campinas, SC"],
-      times: ["acabou de se inscrever", "inscreveu-se há 1 min", "inscreveu-se há 2 min", "garantiu a vaga agora"],
+      names: ["Comunidade Carreira em Escala", "Inscrição Confirmada", "Participação Garantida", "Acesso Liberado"],
+      cities: ["todo o Brasil", "ambiente online", "turma exclusiva", "próxima aula"],
+      times: ["novas inscrições em andamento", "interesse crescente", "vagas sendo preenchidas", "participações confirmadas"],
     };
 
     const toastEl = document.getElementById('social-proof-toast');
