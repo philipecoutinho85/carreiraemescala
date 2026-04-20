@@ -11,7 +11,6 @@ const siteMarkup = String.raw`
         <nav class="avel-nav">
             <a href="#hero">Início</a>
             <a href="#workshop">O Workshop</a>
-            <a href="#solucoes">Soluções</a>
             <a href="#catalogo">Catálogo</a>
         </nav>
     </header>
@@ -33,7 +32,7 @@ const siteMarkup = String.raw`
         <div class="container mx-auto px-6 relative z-10">
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 max-w-4xl mx-auto reveal-up" style="transition-delay: 0.1s;">Inteligência para cada etapa da sua <span class="text-avel-green">vida financeira.</span></h1>
             <p class="text-base md:text-lg text-gray-400 mb-10 max-w-2xl mx-auto font-light reveal-up" style="transition-delay: 0.3s;">Um dos investidores mais influentes do país. O conhecimento que você precisa para rentabilidade, preservação de capital e escala.</p>
-            <div class="reveal-up" style="transition-delay: 0.5s;"><a href="#solucoes" class="btn-avel bg-avel-green text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform inline-block">Conheça as Soluções</a></div>
+            <div class="reveal-up" style="transition-delay: 0.5s;"><a href="#catalogo" class="btn-avel bg-avel-green text-black px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:scale-105 transition-transform inline-block">Conheça os Conteúdos</a></div>
         </div>
     </section>
 
@@ -146,19 +145,6 @@ const siteMarkup = String.raw`
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="solucoes" class="py-24 relative z-10 px-6 overflow-hidden bg-[#020302]">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_100%_50%,rgba(0,229,106,0.15)_0%,transparent_50%)] z-0 pointer-events-none"></div>
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
-            <div class="md:w-1/2 md:pr-10 reveal-left">
-                <h3 class="text-3xl font-bold mb-6 flex flex-wrap items-center gap-2"><span class="text-avel-green tracking-tight">Carreira em Escala.</span><span class="text-gray-400 font-light text-2xl">| Captação</span></h3>
-                <p class="text-white font-bold text-base mb-4 leading-relaxed">Domine a prospecção de Alta Renda e multiplique o seu portfólio.</p>
-                <p class="text-gray-400 text-sm leading-relaxed mb-10">Aprenda os roteiros exatos, as quebras de objeção mais difíceis e as técnicas de <em>networking</em> estratégico que convertem <em>prospects</em> frios em clientes fiéis e promotores do seu trabalho.</p>
-                <a href="#inscricao" class="btn-avel text-xs px-8 py-3">Ver Mais</a>
-            </div>
-            <div class="md:w-1/2 w-full reveal-right"><div class="rounded-2xl overflow-hidden h-[380px] shadow-2xl border border-white/5"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=80" alt="Captação" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"></div></div>
         </div>
     </section>
 
