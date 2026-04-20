@@ -74,7 +74,7 @@ const siteMarkup = String.raw`
                         <div><label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">E-mail Corporativo/Pessoal</label><input type="email" required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all" placeholder="seu@email.com"></div>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div><label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">Celular com DDD</label><input type="tel" required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all" placeholder="(00) 00000-0000"></div>
+                        <div><label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">Celular com DDD</label><input id="celular-ddd" type="tel" inputmode="numeric" autocomplete="tel" maxlength="14" required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all" placeholder="(00) 00000-0000"></div>
                         <div><label class="block text-[11px] font-bold text-gray-400 mb-2 uppercase tracking-widest">Possui certificação ANCORD?</label><select required class="w-full bg-[#0a0f0c] border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-avel-green focus:bg-black transition-all appearance-none"><option value="" disabled selected class="text-gray-600">Selecione uma opção...</option><option value="sim">Sim, já sou certificado</option><option value="estudando">Não, mas estou estudando</option><option value="nao">Não, pretendo iniciar depois</option></select></div>
                     </div>
                     <div class="pt-4"><button type="submit" class="w-full btn-avel py-5 flex items-center justify-center gap-3 shadow-[0_10px_30px_rgba(0,229,106,0.3)] hover:shadow-[0_15px_40px_rgba(0,229,106,0.5)]">QUERO PARTICIPAR GRATUITAMENTE <i class="fa fa-arrow-right"></i></button></div>
@@ -222,6 +222,21 @@ function App() {
       document.querySelectorAll('.mobile-bottom-nav .nav-item').forEach((el) => el.classList.remove('active'));
       if (element) element.classList.add('active');
     };
+
+    const formatPhone = (value) => {
+      const digits = String(value || '').replace(/\D/g, '').slice(0, 11);
+      if (!digits) return '';
+      if (digits.length <= 2) return `(${digits}`;
+      if (digits.length <= 7) return `(${digits.slice(0, 2)})${digits.slice(2)}`;
+      return `(${digits.slice(0, 2)})${digits.slice(2, 7)}-${digits.slice(7)}`;
+    };
+
+    const phoneInput = document.getElementById('celular-ddd');
+    const onPhoneInput = (e) => {
+      e.target.value = formatPhone(e.target.value);
+    };
+    phoneInput?.addEventListener('input', onPhoneInput);
+    cleanups.push(() => phoneInput?.removeEventListener('input', onPhoneInput));
 
     const header = document.querySelector('.avel-header');
     const onScroll = () => {
