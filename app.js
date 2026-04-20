@@ -37,6 +37,17 @@ const siteMarkup = String.raw`
         </div>
     </section>
 
+    <section id="numeros" class="social-info relative overflow-hidden border-y border-white/5">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,106,0.12)_0%,transparent_60%)] z-0 pointer-events-none"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+                <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.1s;"><div class="orbit-circle"><svg viewBox="0 0 100 100" class="orbit-svg"><defs><linearGradient id="orbitFade1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0, 229, 106, 0.8)" /><stop offset="60%" stop-color="rgba(0, 229, 106, 0.1)" /><stop offset="100%" stop-color="rgba(0, 229, 106, 0)" /></linearGradient></defs><circle cx="50" cy="50" r="48" fill="none" stroke="url(#orbitFade1)" stroke-width="0.5" /><circle cx="34" cy="4.5" r="2.5" fill="#020302" stroke="#00E56A" stroke-width="1" /><circle cx="34" cy="4.5" r="1" fill="#fff" /></svg><h3 class="animate-number" data-target="30" data-suffix=" Bi" data-prefix="+R$ ">0</h3></div><p class="uppercase tracking-widest text-xs font-bold text-gray-500">Sob Custódia (AUM)</p></div>
+                <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.3s;"><div class="orbit-circle"><svg viewBox="0 0 100 100" class="orbit-svg"><circle cx="50" cy="50" r="48" fill="none" stroke="url(#orbitFade1)" stroke-width="0.5" /><circle cx="34" cy="4.5" r="2.5" fill="#020302" stroke="#00E56A" stroke-width="1" /><circle cx="34" cy="4.5" r="1" fill="#fff" /></svg><h3 class="animate-number" data-target="200" data-suffix=" Mil" data-prefix="+">0</h3></div><p class="uppercase tracking-widest text-xs font-bold text-gray-500">Clientes Ativos</p></div>
+                <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.5s;"><div class="orbit-circle"><svg viewBox="0 0 100 100" class="orbit-svg"><circle cx="50" cy="50" r="48" fill="none" stroke="url(#orbitFade1)" stroke-width="0.5" /><circle cx="34" cy="4.5" r="2.5" fill="#020302" stroke="#00E56A" stroke-width="1" /><circle cx="34" cy="4.5" r="1" fill="#fff" /></svg><h3 class="animate-number" data-target="2000" data-suffix="" data-prefix="+">0</h3></div><p class="uppercase tracking-widest text-xs font-bold text-gray-500">Assessores Formados</p></div>
+            </div>
+        </div>
+    </section>
+
     <section id="workshop" class="py-24 relative z-10 px-6 bg-[#020302] overflow-hidden border-t border-white/5">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16">
             <div class="md:w-5/12 w-full reveal-left">
@@ -138,17 +149,6 @@ const siteMarkup = String.raw`
         </div>
     </section>
 
-    <section id="numeros" class="social-info relative overflow-hidden border-y border-white/5">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,106,0.12)_0%,transparent_60%)] z-0 pointer-events-none"></div>
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.1s;"><div class="orbit-circle"><svg viewBox="0 0 100 100" class="orbit-svg"><defs><linearGradient id="orbitFade1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(0, 229, 106, 0.8)" /><stop offset="60%" stop-color="rgba(0, 229, 106, 0.1)" /><stop offset="100%" stop-color="rgba(0, 229, 106, 0)" /></linearGradient></defs><circle cx="50" cy="50" r="48" fill="none" stroke="url(#orbitFade1)" stroke-width="0.5" /><circle cx="34" cy="4.5" r="2.5" fill="#020302" stroke="#00E56A" stroke-width="1" /><circle cx="34" cy="4.5" r="1" fill="#fff" /></svg><h3 class="animate-number" data-target="30" data-suffix=" Bi" data-prefix="+R$ ">0</h3></div><p class="uppercase tracking-widest text-xs font-bold text-gray-500">Sob Custódia (AUM)</p></div>
-                <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.3s;"><div class="orbit-circle"><svg viewBox="0 0 100 100" class="orbit-svg"><circle cx="50" cy="50" r="48" fill="none" stroke="url(#orbitFade1)" stroke-width="0.5" /><circle cx="34" cy="4.5" r="2.5" fill="#020302" stroke="#00E56A" stroke-width="1" /><circle cx="34" cy="4.5" r="1" fill="#fff" /></svg><h3 class="animate-number" data-target="200" data-suffix=" Mil" data-prefix="+">0</h3></div><p class="uppercase tracking-widest text-xs font-bold text-gray-500">Clientes Ativos</p></div>
-                <div class="flex flex-col items-center reveal-up" style="transition-delay: 0.5s;"><div class="orbit-circle"><svg viewBox="0 0 100 100" class="orbit-svg"><circle cx="50" cy="50" r="48" fill="none" stroke="url(#orbitFade1)" stroke-width="0.5" /><circle cx="34" cy="4.5" r="2.5" fill="#020302" stroke="#00E56A" stroke-width="1" /><circle cx="34" cy="4.5" r="1" fill="#fff" /></svg><h3 class="animate-number" data-target="2000" data-suffix="" data-prefix="+">0</h3></div><p class="uppercase tracking-widest text-xs font-bold text-gray-500">Assessores Formados</p></div>
-            </div>
-        </div>
-    </section>
-
     <section id="solucoes" class="py-24 relative z-10 px-6 overflow-hidden bg-[#020302]">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_100%_50%,rgba(0,229,106,0.15)_0%,transparent_50%)] z-0 pointer-events-none"></div>
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
@@ -210,7 +210,7 @@ const siteMarkup = String.raw`
     </footer>
 
     <div id="social-proof-toast" class="fixed bottom-[90px] md:bottom-10 left-6 md:left-10 z-50 transform translate-y-[150%] opacity-0 transition-all duration-500 ease-out pointer-events-none">
-        <div class="card-avel px-4 py-3 flex items-center gap-3 border border-avel-green/30 bg-[#0a0f0c]/90 backdrop-blur-xl shadow-[0_5px_20px_rgba(0,229,106,0.15)] min-w-[260px]"><div id="toast-avatar" class="w-10 h-10 rounded-full bg-gradient-to-br from-avel-green to-[#008f42] flex items-center justify-center text-black font-extrabold text-sm shadow-inner">CE</div><div><p class="text-white text-[13px] font-bold leading-tight" id="toast-name">Comunidade Carreira em Escala</p><p class="text-gray-400 text-[11px] leading-tight mt-0.5">Em <span id="toast-city" class="text-avel-green font-semibold">todo o Brasil</span></p><p class="text-gray-500 text-[10px] mt-1 flex items-center gap-1"><i class="fa fa-check-circle text-avel-green"></i> <span id="toast-time">novas inscrições em andamento</span></p></div></div>
+        <div class="card-avel px-4 py-3 flex items-center gap-3 border border-avel-green/30 bg-[#0a0f0c]/90 backdrop-blur-xl shadow-[0_5px_20px_rgba(0,229,106,0.15)] min-w-[260px]"><div id="toast-avatar" class="w-10 h-10 rounded-full bg-gradient-to-br from-avel-green to-[#008f42] flex items-center justify-center text-black font-extrabold text-sm shadow-inner">JM</div><div><p class="text-white text-[13px] font-bold leading-tight" id="toast-name">Juliana M.</p><p class="text-gray-400 text-[11px] leading-tight mt-0.5">De <span id="toast-city" class="text-avel-green font-semibold">Niterói, RJ</span></p><p class="text-gray-500 text-[10px] mt-1 flex items-center gap-1"><i class="fa fa-check-circle text-avel-green"></i> <span id="toast-time">acabou de se inscrever</span></p></div></div>
     </div>
 `;
 
@@ -266,9 +266,9 @@ function App() {
     cleanups.push(() => form?.removeEventListener('submit', onSubmit));
 
     const toastData = {
-      names: ["Comunidade Carreira em Escala", "Inscrição Confirmada", "Participação Garantida", "Acesso Liberado"],
-      cities: ["todo o Brasil", "ambiente online", "turma exclusiva", "próxima aula"],
-      times: ["novas inscrições em andamento", "interesse crescente", "vagas sendo preenchidas", "participações confirmadas"],
+      names: ["Juliana M.", "Carlos A.", "Fernanda S.", "Rafael P.", "Larissa T.", "Bruno C.", "Mariana F.", "Igor L.", "Patrícia N.", "André V.", "Camila R.", "Thiago D."],
+      cities: ["Niterói, RJ", "São Paulo, SP", "Belo Horizonte, MG", "Curitiba, PR", "Salvador, BA", "Recife, PE", "Fortaleza, CE", "Brasília, DF", "Goiânia, GO", "Florianópolis, SC", "Campinas, SP", "Porto Alegre, RS"],
+      times: ["acabou de se inscrever", "inscreveu-se há 1 min", "inscreveu-se há 2 min", "garantiu a vaga agora", "acabou de confirmar participação"],
     };
 
     const toastEl = document.getElementById('social-proof-toast');
