@@ -126,16 +126,6 @@ const siteMarkup = String.raw`
         </div>
     </section>
 
-    
-
-    <section class="py-24 relative z-10 px-6 overflow-hidden bg-[#020302]">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_0%_50%,rgba(0,229,106,0.15)_0%,transparent_50%)] z-0 pointer-events-none"></div>
-        <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-16 relative z-10">
-            <div class="md:w-1/2 md:pl-10 reveal-right">
-                <h3 class="text-3xl font-bold mb-6 flex flex-wrap items-center gap-2"><span class="text-avel-green tracking-tight">Carreira em Escala.</span><span class="text-gray-400 font-light text-2xl">| Gestão de Carteira</span></h3>
-                <p class="text-white font-bold text-base mb-4 leading-relaxed">Entregue valor real e blinde os seus clientes contra a concorrência do mercado.</p>
-                <p class="text-gray-400 text-sm leading-relaxed mb-10">Vá muito além da alocação básica de produtos. Saiba como ler o cenário macroeconômico, montar relatórios precisos e propor soluções sofisticadas que protegem e rentabilizam o patrimônio do cliente no longo prazo.</p>
-                <a href="#inscricao" class="btn-avel text-xs px-8 py-3">Garantir Vaga</a>
             </div>
             <div class="md:w-1/2 w-full reveal-left"><div class="rounded-2xl overflow-hidden h-[380px] shadow-2xl border border-white/5"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80" alt="Gestão de Carteira" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"></div></div>
         </div>
