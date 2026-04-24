@@ -126,10 +126,7 @@ const siteMarkup = String.raw`
         </div>
     </section>
 
-            </div>
-            <div class="md:w-1/2 w-full reveal-left"><div class="rounded-2xl overflow-hidden h-[380px] shadow-2xl border border-white/5"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80" alt="Gestão de Carteira" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"></div></div>
-        </div>
-    </section>
+              </section>
 
     <section id="rumo-bilhao" class="py-32 relative z-10 px-6 overflow-hidden border-y border-white/5">
         <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=1920&q=80" alt="Plateia Evento" class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-luminosity z-0">
