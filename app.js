@@ -126,27 +126,7 @@ const siteMarkup = String.raw`
         </div>
     </section>
 
-    <section class="py-24 relative z-10 px-6 bg-[#020302] overflow-hidden">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16 reveal-up">
-                <p class="text-avel-green font-semibold tracking-widest uppercase text-sm mb-4">A Filosofia da Carreira em Escala</p>
-                <h2 class="text-3xl md:text-4xl font-bold leading-snug text-white">Para quem não se contenta com a média e busca alto rendimento. <br><span class="text-gray-400 text-2xl mt-4 block font-normal">Um ecossistema criado por assessores, para assessores.</span></h2>
-            </div>
-            <div class="flex flex-col md:flex-row items-center gap-12 mt-16">
-                <div class="md:w-1/2 reveal-left" style="transition-delay: 0.2s;">
-                    <h3 class="text-2xl font-bold mb-4">Quem Somos</h3>
-                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">Nascemos da prática. O que começou na ponta, no atendimento corpo a corpo com o investidor de alta renda, transformou-se em uma das maiores e mais eficientes operações de assessoria de investimentos do Brasil.</p>
-                    <p class="text-gray-400 text-sm leading-relaxed">Nossa missão é transferir esse <em>know-how</em> diretamente para você, entregando os atalhos comerciais, a inteligência de mercado e as ferramentas que os nossos melhores sócios e profissionais utilizam todos os dias na linha de frente.</p>
-                </div>
-                <div class="md:w-1/2 w-full reveal-right" style="transition-delay: 0.4s;">
-                    <div class="relative rounded-2xl overflow-hidden aspect-video border border-white/10 card-avel group cursor-pointer shadow-2xl">
-                        <img src="samyr_quemsomos.png?auto=format&fit=crop&w=800&q=80" alt="Apresentação Institucional" class="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 grayscale group-hover:grayscale-0" style="object-position: center;">
-                        <div class="absolute inset-0 flex items-center justify-center"><div class="w-16 h-16 rounded-full border border-white/30 backdrop-blur-sm bg-black/40 flex items-center justify-center text-white group-hover:bg-avel-green group-hover:text-black group-hover:border-avel-green transition-all duration-300"><i class="fa fa-play ml-1 text-lg"></i></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <section class="py-24 relative z-10 px-6 overflow-hidden bg-[#020302]">
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_0%_50%,rgba(0,229,106,0.15)_0%,transparent_50%)] z-0 pointer-events-none"></div>
